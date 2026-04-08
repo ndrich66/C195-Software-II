@@ -1,0 +1,89 @@
+package sample;
+
+import dao.JDBC;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import model.User;
+
+import java.sql.SQLException;
+import java.util.Locale;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
+/** This class create an app that schedules appointments. */
+public class Main extends Application
+{
+    private static User userActiveNow = new User();
+    public static User getUserActiveNow() {
+        return userActiveNow;
+    }
+    public static void setUserActiveNow(User user) {
+        userActiveNow = user;
+    }
+
+    public static int userID;
+    public static String userName;
+
+    public static ResourceBundle rb;
+
+    /** This is the init method.
+     * It prints the message Starting in the terminal. */
+    @Override
+    public void init()
+    {
+        System.out.println("Starting.");
+    }
+
+    /** This is the starting method.
+     * This method gets called on application starting.
+     * This method takes you to the user login page.
+     * @param primaryStage UserLogin
+     * @throws Exception An exception */
+    @Override
+    public void start(Stage primaryStage) throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("../view/UserLogin.fxml"));
+        primaryStage.setTitle("Welcome");
+        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.show();
+    }
+
+    /** This is the main method.
+     * This is the first method to get called when running this java application.
+     * @throws SQLException SQL method
+     * @param args args */
+    public static void main(String[] args) throws SQLException
+    {
+        //Locale.setDefault(Locale.FRENCH);
+        JDBC.openConnection();
+
+        Locale france = new Locale("fr", "FR");
+
+        try
+        {
+            ResourceBundle rb = ResourceBundle.getBundle("util/Lan", Locale.getDefault());
+            if (Locale.getDefault().getLanguage().equals("fr") ||
+                    Locale.getDefault().getLanguage().equals("en"));
+        }
+        catch (MissingResourceException m)
+        {
+            System.out.println("Resource bundles missing.");
+        }
+
+        launch(args);
+
+        JDBC.closeConnection();
+    }
+
+    /** This is the stop method.
+     * This is the final method to get called.
+     * This is the method prints a message Terminated in the terminal. */
+    @Override
+    public void stop()
+    {
+        System.out.println("Terminated");
+    }
+}

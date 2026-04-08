@@ -1,0 +1,13 @@
+# this is a property file.
+
+Lan_fr.properties
+login=Connexion
+username=Nom d'utilisateur
+password=Le Mot de Passe
+language=Langue
+English=Française
+appointment=Planificateur
+scheduler=de Rendez-vous
+time=Fuseau
+zone=Horaire:
+loginError=Saisissez un nom d'utilisateur et un mot de passe valides.

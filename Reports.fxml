@@ -1,0 +1,14 @@
+Lan_en.properties
+login=Login
+username=Username
+password=Password
+reset=Reset
+language=Language
+English=English
+appointment=Appointment
+scheduler=Scheduler
+time=Time
+zone=Zone
+loginError=Enter a valid Username and Password.
+
+#probably don't need this

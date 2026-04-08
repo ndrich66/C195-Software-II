@@ -1,0 +1,272 @@
+package model;
+
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+/** This class creates the Customers object. */
+public class Customers
+{
+    private int customerID;
+    private String customerName;
+    private String address;
+    private String postalCode;
+    private String phone;
+    private LocalDateTime createdDate;
+    private String createdBy;
+    private Timestamp lastUpdate;
+    private String lastUpdateBy;
+    private int divisionID;
+    private int countryID;
+
+    /** This is a constructor for the customer object.
+     * @param customerID Integer
+     * @param customerName String
+     * @param address String
+     * @param postalCode String
+     * @param phone String
+     * @param createdDate LocalDateTime
+     * @param createdBy String
+     * @param lastUpdate Timestamp
+     * @param lastUpdateBy String
+     * @param divisionID Integer */
+    public Customers(int customerID,
+                     String customerName,
+                     String address,
+                     String postalCode,
+                     String phone,
+                     LocalDateTime createdDate,
+                     String createdBy,
+                     Timestamp lastUpdate,
+                     String lastUpdateBy,
+                     int divisionID)
+    {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.phone = phone;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
+        this.lastUpdate = lastUpdate;
+        this.lastUpdateBy = lastUpdateBy;
+        this.divisionID = divisionID;
+    }
+
+    /** This is a constructor for the customer object.
+     * @param customerID Integer
+     * @param customerName String
+     * @param address String
+     * @param postalCode String
+     * @param phone String
+     * @param divisionID Integer */
+    public Customers(int customerID,
+                     String customerName,
+                     String address,
+                     String postalCode,
+                     String phone,
+                     int divisionID)
+    {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.phone = phone;
+        this.divisionID = divisionID;
+    }
+
+    /** This is a constructor for the customer object.
+     * @param customerID Integer
+     * @param customerName String
+     * @param address String
+     * @param postalCode String
+     * @param phone String
+     * @param createdDate LocalDateTime
+     * @param createdBy String
+     * @param lastUpdate Timestamp
+     * @param lastUpdateBy String
+     * @param divisionID Integer
+     * @param countryID Integer */
+    public Customers(int customerID,
+                     String customerName,
+                     String address,
+                     String postalCode,
+                     String phone,
+                     LocalDateTime createdDate,
+                     String createdBy,
+                     Timestamp lastUpdate,
+                     String lastUpdateBy,
+                     int divisionID,
+                     int countryID)
+    {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.phone = phone;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
+        this.lastUpdate = lastUpdate;
+        this.lastUpdateBy = lastUpdateBy;
+        this.divisionID = divisionID;
+        this.countryID = countryID;
+    }
+
+    /** This is a getter for customer ID.
+     * @return customerID */
+    public long getCustomerID()
+    {
+        return customerID;
+    }
+
+    /** This is a setter for customer ID.
+     * @param customerID Integer */
+    public void setCustomerID(int customerID)
+    {
+        this.customerID = customerID;
+    }
+
+    /** This is a getter for customer name.
+     * @return customerName */
+    public String getCustomerName()
+    {
+        return customerName;
+    }
+
+    /** This is a setter for customer name.
+     * @param customerName String */
+    public void setCustomerName(String customerName)
+    {
+        this.customerName = customerName;
+    }
+
+    /** This is a getter for the address.
+     * @return address */
+    public String getAddress()
+    {
+        return address;
+    }
+
+    /** This is a setter for the address.
+     * @param address String */
+    public void setAddress(String address)
+    {
+        this.address = address;
+    }
+
+    /** This is a getter for the postal code.
+     * @return postalCode */
+    public String getPostalCode()
+    {
+        return postalCode;
+    }
+
+    /** This is a setter for the postal code.
+     * @param postalCode String */
+    public void setPostalCode(String postalCode)
+    {
+        this.postalCode = postalCode;
+    }
+
+    /** This is a getter for the phone number.
+     * @return phone */
+    public String getPhone()
+    {
+        return phone;
+    }
+
+    /** This is a setter for the phone.
+     * @param phone String */
+    public void setPhone(String phone)
+    {
+        this.phone = phone;
+    }
+
+    /** This is a getter for the created date.
+     * @return createdDate */
+    public LocalDateTime getCreatedDate()
+    {
+        return createdDate;
+    }
+
+    /** This is a setter for the created date.
+     * @param createdDate LocalDateTime */
+    public void setCreatedDate(LocalDateTime createdDate)
+    {
+        this.createdDate = createdDate;
+    }
+
+    /** This is a getter for the created by.
+     * @return createdBy */
+    public String getCreatedBy()
+    {
+        return createdBy;
+    }
+
+    /** This is a setter for the created by.
+     * @param createdBy String */
+    public void setCreatedBy(String createdBy)
+    {
+        this.createdBy = createdBy;
+    }
+
+    /** This is a getter for the last update.
+     * @return lastUpdate */
+    public Timestamp getLastUpdate()
+    {
+        return lastUpdate;
+    }
+
+    /** This is a setter for the last update.
+     * @param lastUpdate Timestamp */
+    public void setLastUpdate(Timestamp lastUpdate)
+    {
+        this.lastUpdate = lastUpdate;
+    }
+
+    /** This is a getter for the last update by.
+     * @return lastUpdateBy */
+    public String getLastUpdateBy()
+    {
+        return lastUpdateBy;
+    }
+
+    /** This is a setter for the last update by.
+     * @param lastUpdateBy String */
+    public void setLastUpdateBy(String lastUpdateBy)
+    {
+        this.lastUpdateBy = lastUpdateBy;
+    }
+
+    /** This is a getter for the division ID.
+     * @return divisionID */
+    public long getDivisionID()
+    {
+        return divisionID;
+    }
+
+    /** This is a setter for the division ID.
+     * @param divisionID Integer */
+    public void setDivisionID(int divisionID)
+    {
+        this.divisionID = divisionID;
+    }
+
+    /** This is a getter for the country ID.
+     * @return countryID */
+    public long getCountryID() {
+        return countryID;
+    }
+
+    /** This is a setter for the country ID.
+     * @param countryID Integer */
+    public void setCountryID(int countryID) {
+        this.countryID = countryID;
+    }
+
+    /** This is an override method.
+     * This method does a toString for customer ID and customer name. */
+    @Override
+    public String toString() {
+        return customerID + ": " + customerName;
+    }
+}

@@ -1,0 +1,130 @@
+package model;
+
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+/** This class creates the FirstLevelDivisions object. */
+public class FirstLevelDivision
+{
+    private int divisionID;
+    private String division;
+    private LocalDateTime createdDate;
+    private String createdBy;
+    private Timestamp lastUpdate;
+    private String lastUpdateBy;
+    private int countryID;
+
+    /** This is a constructor for FirstLevelDivisions.
+     * This constructor is used in the DAO.
+     * @param divisionID Integer
+     * @param divisions String
+     * @param countryID Integer */
+    public FirstLevelDivision(int countryID, String divisions, int divisionID)
+    {
+        this.countryID = countryID;
+        this.division = divisions;
+        this.divisionID = divisionID;
+    }
+
+    /** This is a constructor for FirstLevelDivisions.
+     * This constructor is used in the DAO.
+     * @param divisionID Integer
+     * @param divisions String */
+    public FirstLevelDivision(String divisions, int divisionID)
+    {
+        this.division = divisions;
+        this.divisionID = divisionID;
+    }
+
+    /** This is a getter for the division ID.
+     * @return divisionID */
+    public long getDivisionID() {
+        return divisionID;
+    }
+
+    /** This is a setter for the division ID.
+     * @param  divisionID Integer */
+    public void setDivisionID(int divisionID) {
+        this.divisionID = divisionID;
+    }
+
+    /** This is a getter for the division name.
+     * @return division */
+    public String getDivision() {
+        return division;
+    }
+
+    /** This is a setter for the division.
+     * @param  division String */
+    public void setDivision(String division) {
+        this.division = division;
+    }
+
+    /** This is a getter for the created date.
+     * @return createdDate */
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    /** This is a setter for the created date.
+     * @param  createdDate LocalDateTime */
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    /** This is a getter for the created by.
+     * @return createdBy */
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    /** This is a setter for the created by.
+     * @param  createdBy String */
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    /** This is a getter for the last update.
+     * @return lastUpdate */
+    public Timestamp getLastUpdate() {
+        return lastUpdate;
+    }
+
+    /** This is a setter for the last update.
+     * @param  lastUpdate Timestamp */
+    public void setLastUpdate(Timestamp lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
+    /** This is a getter for the last update by.
+     * @return lastUpdateBy */
+    public String getLastUpdateBy() {
+        return lastUpdateBy;
+    }
+
+    /** This is a setter for the last update.
+     * @param  lastUpdateBy String */
+    public void setLastUpdateBy(String lastUpdateBy) {
+        this.lastUpdateBy = lastUpdateBy;
+    }
+
+    /** This is a getter for the country ID.
+     * @return countryID */
+    public long getCountryID() {
+        return countryID;
+    }
+
+    /** This is a setter for the country ID.
+     * @param  countryID Integer */
+    public void setCountryID(int countryID) {
+        this.countryID = countryID;
+    }
+
+    /** This is an override method.
+     * This method is a toString method for the division name.
+     * @return division */
+    @Override
+    public String toString() {
+        return division;
+    }
+}

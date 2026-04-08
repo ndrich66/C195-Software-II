@@ -1,0 +1,115 @@
+package model;
+
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+/** This class creates the Countries object. */
+public class Countries
+{
+    private int countryID;
+    private String country;
+    private LocalDateTime createdDate;
+    private String createdBy;
+    private Timestamp lastUpdate;
+    private String lastUpdateBy;
+
+    /** This is a constructor for the countries object.
+     * This constructor is used in the associated DAO.
+     * @param countryID Integer
+     * @param country String */
+    public Countries(int countryID, String country) {
+        this.countryID = countryID;
+        this.country = country;
+    }
+
+    /** This is a getter for the country ID.
+     * @return countryID */
+    public int getCountryID()
+    {
+        return countryID;
+    }
+
+    /** This is a setter for the country ID.
+     * @param countryID Integer */
+    public void setCountryID(int countryID)
+    {
+        this.countryID = countryID;
+    }
+
+    /** This is a getter for the country name.
+     * @return country */
+    public String getCountry()
+    {
+        return country;
+    }
+
+    /** This is a setter for the country name.
+     * @param country String */
+    public void setCountry(String country)
+    {
+        this.country = country;
+    }
+
+    /** This is a getter for the created date.
+     * @return createdDate */
+    public LocalDateTime getCreatedDate()
+    {
+        return createdDate;
+    }
+
+    /** This is a setter for the created date.
+     * @param createdDate LocalDateTime */
+    public void setCreatedDate(LocalDateTime createdDate)
+    {
+        this.createdDate = createdDate;
+    }
+
+    /** This is a getter for the created by.
+     * @return createdBy */
+    public String getCreatedBy()
+    {
+        return createdBy;
+    }
+
+    /** This is a setter for the created by.
+     * @param createdBy String */
+    public void setCreatedBy(String createdBy)
+    {
+        this.createdBy = createdBy;
+    }
+
+    /** This is a getter for the last update.
+     * @return lastUpdate */
+    public Timestamp getLastUpdate()
+    {
+        return lastUpdate;
+    }
+
+    /** This is a setter for the last update.
+     * @param lastUpdate Timestamp */
+    public void setLastUpdate(Timestamp lastUpdate)
+    {
+        this.lastUpdate = lastUpdate;
+    }
+
+    /** This is a getter for the last update by.
+     * @return lastUpdateBy */
+    public String getLastUpdatedBy()
+    {
+        return lastUpdateBy;
+    }
+
+    /** This is a setter for the last update by.
+     * @param lastUpdatedBy String */
+    public void setLastUpdatedBy(String lastUpdatedBy)
+    {
+        this.lastUpdateBy = lastUpdatedBy;
+    }
+
+    /** This is an override method.
+     * This method does a toString for country names. */
+    @Override
+    public String toString() {
+        return country;
+    }
+}
